@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+header {
+  background-color: pink;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+nav {
+  background-color:antiquewhite;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+.car-card {
+  width: 300px;
+  background-color:#FFC0CB;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.car-card img {
+  width: 100%;
+  height: auto;
+}
+.car-card h2 {
+  margin: 10px;
+}
+.car-card p {
+  margin: 10px;
+  text-align: justify;
+}
+
+    
+  
+  
