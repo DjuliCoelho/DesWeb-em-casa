@@ -1,0 +1,50 @@
+.bola{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px dashed blueviolet;
+    border-top-color:greenyellow;
+    animation: spin 1s infinite linear;
+    animation-name: carregar;
+    margin-bottom: 10px;
+  
+}
+.bola-container{
+    align-items: center;
+}
+
+
+.barra{
+    width: 500px;
+    height: 15px; 
+    background-color: burlywood;
+}
+.barra>.bola{
+    width: 5px;
+    height: 15px;
+    background-color: greenyellow;
+    animation-name: vaivem;
+   animation: progress 2s infinite linear;
+   position: relative;
+}
+
+@keyframes vaivem{
+    0%{
+        left: 200px;
+        top: 0px;
+    }
+
+    100%{
+        left: 95vw;
+        top: 0px;
+    }
+}
+
+@keyframes carregar {
+    0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+}
+}
