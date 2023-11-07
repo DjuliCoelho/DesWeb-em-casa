@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aula Vetor</title>
+</head>
+<body>
+    <main>
+        <p id="saida">
+            Trabalhando com Arrays
+            <br>
+        </p>
+    </main>
+    <script>
+        const saida = document.getElementById('saida');
+        var frutas = ["Maça","Banana","Laranja","Abacaxi","Morango"];
+
+        for(i in frutas){
+            saida.innerText += "\n Chave: " + i + " Valor: " + frutas[i]
+        }
+
+        saida.innerText += "\n";
+        for(fruta of frutas){
+            saida.innerText += "\n Valor: " + fruta;
+        }
+
+        saida.innerText += "\n";
+        frutas.forEach((elemento, chave) =>{
+            saida.innerText += "\n Chave: " + chave;
+            saida.innerText += " Valor: " + elemento;
+        });
+
+        frutas.push("Melancia");
+        saida.innerText += "\n\n Adicionando no final do Vetor: " + frutas;
+
+        frutas.pop();
+        saida.innerText += "\n\n Removendo último elemento: " + frutas;
+
+        frutas.unshift("Melancia");
+        saida.innerText += "\n\n Adicionado no início do Vetor: " + frutas;
+
+        frutas.shift();
+        saida.innerText += "\n\n Removendo primeiro elemento: " + frutas;
+
+        var novoVetor = frutas.slice(0,2); //pega até antes do elemento especificado "2"
+        saida.innerText += "\n\n Novo vetor: " + novoVetor;
+
+        frutas.splice(1,1);
+        saida.innerText += "\n\n Removendo um item: " + frutas;
+
+        // frutas.splice(1,0, "Banana");
+        // saida.innerText += "\n\n Adicionando um elemento: " + frutas;
+
+        frutas.splice(1,1, "Banana");
+        saida.innerText += "\n\n Substituindo um elemento: " + frutas;
+
+        var key = frutas.indexOf("Maça");
+        saida.innerText += "\n\n Posição da 'Maça': " + key;
+
+
+    </script>
+</body>
+
+</html>
